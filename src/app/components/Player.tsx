@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container } from 'react-bootstrap/Button';
+import  Container from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';  
 
 export default function Player() {
