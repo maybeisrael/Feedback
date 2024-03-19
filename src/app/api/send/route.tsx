@@ -1,21 +1,23 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-const sendEmail = async ({ fromEmail, toEmail, subject, message }: {
-  fromEmail: string,
-  toEmail: string,
-  subject: string,
-  message: string
-}) => {
+interface EmailData {
+  fromEmail: string;
+  toEmail: string;
+  subject: string;
+  message: string;
+}
+
+const sendEmail = async ({ fromEmail, toEmail, subject, message }: EmailData) => {
   console.log("Sending email to:", toEmail);
   console.log("Subject:", subject);
   console.log("Message:", message);
 
   try {
-    
+    // Simulate sending email asynchronously
     await new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve({ success: true });
-      }, 2000); 
+      }, 2000);
     });
     return { success: true };
   } catch (error) {
@@ -35,7 +37,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.log(email, subject, message);
 
     const fromEmail = process.env.FROM_EMAIL as string;
-    const data = await sendEmail({ fromEmail, toEmail: email, subject, message });
+    if (!fromEmail) {
+      throw new Error("FROM_EMAIL environment variable is not defined");
+    }
+
+    const emailData: EmailData = { fromEmail, toEmail: email, subject, message };
+    const data = await sendEmail(emailData);
     res.status(200).json(data);
   } catch (error) {
     console.error("Error handling request:", error);
