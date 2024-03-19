@@ -59,7 +59,7 @@ const AboutSection = () => {
           <p className="text-base lg:text-lg">
           My technical prowess, I indulge in gaming, 
           particularly relishing the adrenaline rush of car racing simulations. 
-          Additionally, I'm a fervent football enthusiast, ardently supporting Chelsea Football Club. 
+          Additionally, I am a fervent football enthusiast, ardently supporting Chelsea Football Club. 
           My eagerness to collaborate and continuous quest for knowledge fuel my passion for creating exceptional digital
            experiences.
           </p>
