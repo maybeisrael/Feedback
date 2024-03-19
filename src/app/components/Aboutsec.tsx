@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import { motion } from 'framer-motion';
 import ExperienceCard from './ExperienceCard';
@@ -8,7 +9,7 @@ export default function Aboutsec() {
       <h3 className='text-center uppercase tracking-[20px] text-gray-500 text-2xl mt-8 mb-8 '>
         Experience
       </h3> 
-      <div 
+      <motion.div 
         initial={{ opacity: 0 }}
         whileInView={{ opacity:1}}
         transition={{ duration: 1.5 }}
@@ -20,7 +21,7 @@ export default function Aboutsec() {
           <ExperienceCard />
           <ExperienceCard />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
