@@ -57,7 +57,7 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-          My technical prowess, I indulge in gaming, 
+          My technical prowess, I also indulge in gaming, 
           particularly relishing the adrenaline rush of car racing simulations. 
           Additionally, I am a fervent football enthusiast, ardently supporting Chelsea Football Club. 
           My eagerness to collaborate and continuous quest for knowledge fuel my passion for creating exceptional digital
