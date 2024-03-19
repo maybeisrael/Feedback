@@ -16,6 +16,11 @@ module.exports = {
     },
     colors: {
       ...colors,
+      sky: colors.sky, // Rename lightBlue to sky
+      stone: colors.stone, // Rename warmGray to stone
+      neutral: colors.neutral, // Rename trueGray to neutral
+      gray: colors.gray, // Rename coolGray to gray
+      slate: colors.slate, // Rename blueGray to slate
       primary: colors.purple,
       secondary: colors.pink,
     },
