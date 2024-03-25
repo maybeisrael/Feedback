@@ -2,6 +2,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
+
 const AnimatedNumbers = dynamic(
   () => {
     return import("react-animated-numbers");
@@ -46,7 +47,7 @@ const AchievementsSection = () => {
                   includeComma
                   animateToNumber={parseInt(achievement.value)}
                   locale="en-US"
-                  className="text-white text-4xl font-bold"
+                  
                   configs={(_, index) => {
                     return {
                       mass: 1,
